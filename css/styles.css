@@ -25,6 +25,7 @@ body {
 }
 
 #buy-ticket input {
+    text-align: center;
     display: block;
     margin: 0 auto;
     border-color: var(--bs-purple);
