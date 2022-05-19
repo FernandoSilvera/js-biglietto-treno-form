@@ -10,6 +10,7 @@ const submit = document.getElementById("submitBtn");
 const erase = document.getElementById("eraseBtn");
 
 const kmPrice = 0.21;
+let datiValidi = true;
 
 
 
@@ -28,24 +29,29 @@ submit.addEventListener("click", function createTicket() {
     let overDiscount = totalPrice * .4;  
 
     //Code
-    spanName.innerHTML = userName.value;
-
-    if (userAge.value === "under") {
-        ticketPrice = totalPrice - underDiscount;
-        spanOffer.innerHTML = "20% Discount";
-    } else if (userAge.value === "over") {
-        ticketPrice = totalPrice - overDiscount;
-        spanOffer.innerHTML = "40% Discount";
+    if (userKm.value <= 5 || userKm.value >= 500) {
+        datiValidi = false;
+        alert("Inserisci un numero di km tra 5 e 1000")
     } else {
-        ticketPrice = totalPrice;
-        spanOffer.innerHTML = "No discount";
+        datiValidi = true;
     }
 
-    spanCarriage.innerHTML = randomCarriage.toFixed();
-    spanCode.innerHTML = randomCode.toFixed();
-    spanPrice.innerHTML = `${ticketPrice.toFixed(2)}€`;
+    if (datiValidi) {
+        if (userAge.value === "under") {
+            ticketPrice = totalPrice - underDiscount;
+            spanOffer.innerHTML = "20% Discount";
+        } else if (userAge.value === "over") {
+            ticketPrice = totalPrice - overDiscount;
+            spanOffer.innerHTML = "40% Discount";
+        } else {
+            ticketPrice = totalPrice;
+            spanOffer.innerHTML = "No discount";
+        }
 
-    userName.value = "";
-    userKm.value = "";
+        spanName.innerHTML = userName.value;
+        spanCarriage.innerHTML = randomCarriage.toFixed();
+        spanCode.innerHTML = randomCode.toFixed();
+        spanPrice.innerHTML = `${ticketPrice.toFixed(2)}€`;
+    }
 });
 
