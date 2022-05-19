@@ -8,6 +8,7 @@ let spanCode = document.getElementById("span-code");
 let spanPrice = document.getElementById("span-price");
 const submit = document.getElementById("submitBtn");
 const erase = document.getElementById("eraseBtn");
+const ticketSection = document.getElementById("ticket-section");
 
 const kmPrice = 0.21;
 let datiValidi = true;
@@ -26,9 +27,11 @@ submit.addEventListener("click", function createTicket() {
     let randomCode = Math.floor(randomNum * 100000);
     let totalPrice = userKm.value * kmPrice;
     let underDiscount = totalPrice * .2;
-    let overDiscount = totalPrice * .4;  
+    let overDiscount = totalPrice * .4;
 
     //Code
+    ticketSection.classList.remove("d-none");
+
     if (userKm.value <= 5 || userKm.value >= 500) {
         datiValidi = false;
         alert("Inserisci un numero di km tra 5 e 1000")

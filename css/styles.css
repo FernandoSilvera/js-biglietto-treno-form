@@ -1,8 +1,24 @@
-main {
+body {
     background-color: brown;
+}
+
+.row {
+    margin-left: 0;
+}
+
+#buy-ticket .row {
+    width: 100%;
+}
+
+#ticket .row {
+    width: 100%;
 }
 
 #buy-ticket input {
     display: block;
     margin: 0 auto;
+}
+
+.spacing-h2 {
+    margin: 2rem;
 }
