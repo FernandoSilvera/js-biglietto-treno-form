@@ -14,7 +14,7 @@
     <main>
         <div class="container">
             <h2 class="text-center text-white text-uppercase spacing-h2">Calcola il prezzo del tuo biglietto</h2>
-            <div id="buy-ticket" class="bg-light p-3">
+            <div id="buy-ticket" class="text-purple bg-light p-3">
                 <div class="row text-center">
                     <div class="col">
                         <label for="name">Nome Cognome</label>
@@ -28,7 +28,7 @@
     
                     <div class="col">
                         <label for="age">Fascia d'età</label>
-                        <select name="userAge" id="age">
+                        <select name="userAge" id="age" class="d-block m-auto">
                             <option value="under">&lt; 18</option>
                             <option value="normal">18 - 65</option>
                             <option value="over">&gt; 65</option>
@@ -37,17 +37,18 @@
                 </div>
                     
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center mt-5">
                     <div class="col-1">
-                        <button type="button" id="submitBtn">Genera</button>
+                        <button type="button" id="submitBtn" class="btn btn-purple">Genera</button>
                     </div>
 
                     <div class="col-1">
-                        <button type="button" id="eraseBtn">Annulla</button>
+                        <button type="button" id="eraseBtn" class="btn btn-purple">Annulla</button>
                     </div>
                 </div>
             </div>
 
+            <!-- ------------------------------------- TICKET SECTION ------------------------------ -->
             <section id="ticket-section" class="d-none">
                 <h2 class="text-center text-white text-uppercase spacing-h2">Il tuo biglietto</h2>
                 <div id="ticket" class="bg-light p-3">
@@ -60,7 +61,7 @@
                             </div>
                         </div>
 
-                        <div class="col-9">
+                        <div id="ticket-content" class="col-9">
                             <div class="p-3">
                                 <div class="row">
                                     <div class="col-3">

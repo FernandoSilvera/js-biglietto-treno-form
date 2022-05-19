@@ -30,8 +30,6 @@ submit.addEventListener("click", function createTicket() {
     let overDiscount = totalPrice * .4;
 
     //Code
-    ticketSection.classList.remove("d-none");
-
     if (userKm.value <= 5 || userKm.value >= 500) {
         datiValidi = false;
         alert("Inserisci un numero di km tra 5 e 1000")
@@ -40,6 +38,8 @@ submit.addEventListener("click", function createTicket() {
     }
 
     if (datiValidi) {
+        ticketSection.classList.remove("d-none");
+
         if (userAge.value === "under") {
             ticketPrice = totalPrice - underDiscount;
             spanOffer.innerHTML = "20% Discount";

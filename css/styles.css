@@ -1,10 +1,20 @@
+:root {
+    --bs-purple: rgb(173, 0, 69);
+}
+
 body {
-    background-color: brown;
+    background-color: var(--bs-purple);
+}
+
+.text-purple {
+    color: var(--bs-purple);
 }
 
 .row {
     margin-left: 0;
 }
+
+/* CONTENT */
 
 #buy-ticket .row {
     width: 100%;
@@ -17,8 +27,30 @@ body {
 #buy-ticket input {
     display: block;
     margin: 0 auto;
+    border-color: var(--bs-purple);
+    border-radius: 8px;
+}
+
+#buy-ticket label {
+    margin-bottom: 1rem;
+}
+
+#buy-ticket select {
+    border-color: var(--bs-purple);
+    border-radius: 8px;
+}
+
+#ticket-content {
+    border-top: 2px solid var(--bs-secondary);
+    border-bottom: 2px solid var(--bs-secondary);
 }
 
 .spacing-h2 {
     margin: 2rem;
+}
+
+.btn-purple {
+    color: var(--bs-purple);
+    background-color: rgb(211, 211, 211);
+    border-color: var(--bs-secondary);
 }
