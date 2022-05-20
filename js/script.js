@@ -30,7 +30,7 @@ submit.addEventListener("click", function createTicket() {
     let overDiscount = totalPrice * .4;
 
     //Code
-    if (isNaN(userKm.value) || userKm.value <= 5 || userKm.value >= 500) {
+    if (isNaN(userKm.value) || parseInt(userKm.value) <= 5 || parseInt(userKm.value) >= 500) {
         datiValidi = false;
         userKm.value = "";
         alert("Inserisci un numero di km tra 5 e 500")
