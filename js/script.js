@@ -32,6 +32,7 @@ submit.addEventListener("click", function createTicket() {
     //Code
     if (isNaN(userKm.value) || userKm.value <= 5 || userKm.value >= 500) {
         datiValidi = false;
+        userKm.value = "";
         alert("Inserisci un numero di km tra 5 e 500")
     } else {
         datiValidi = true;
